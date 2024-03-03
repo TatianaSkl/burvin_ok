@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/burvin_ok/static/css/main.5876a691.css",
+    "main.js": "/burvin_ok/static/js/main.44ea1cac.js",
+    "static/js/104.ee76a617.chunk.js": "/burvin_ok/static/js/104.ee76a617.chunk.js",
+    "static/js/136.72ecee2b.chunk.js": "/burvin_ok/static/js/136.72ecee2b.chunk.js",
+    "static/js/732.d6f40587.chunk.js": "/burvin_ok/static/js/732.d6f40587.chunk.js",
+    "static/js/212.ca6bce54.chunk.js": "/burvin_ok/static/js/212.ca6bce54.chunk.js",
+    "static/js/28.b19a275b.chunk.js": "/burvin_ok/static/js/28.b19a275b.chunk.js",
+    "static/js/448.7e3b871c.chunk.js": "/burvin_ok/static/js/448.7e3b871c.chunk.js",
+    "static/js/500.150f4eb9.chunk.js": "/burvin_ok/static/js/500.150f4eb9.chunk.js",
+    "static/js/270.16ffe6d1.chunk.js": "/burvin_ok/static/js/270.16ffe6d1.chunk.js",
+    "static/js/230.e7f34505.chunk.js": "/burvin_ok/static/js/230.e7f34505.chunk.js",
+    "static/js/432.ee443a10.chunk.js": "/burvin_ok/static/js/432.ee443a10.chunk.js",
+    "static/media/image_top_5.jpg": "/burvin_ok/static/media/image_top_5.4a06ac8d58feea005fe4.jpg",
+    "static/media/image_top_4.jpg": "/burvin_ok/static/media/image_top_4.67062e8645dc5a283d39.jpg",
+    "static/media/image_top_2.jpg": "/burvin_ok/static/media/image_top_2.f25a696740a973d21e00.jpg",
+    "static/media/image_top_1.jpg": "/burvin_ok/static/media/image_top_1.15d71b66a61ebba88f6a.jpg",
+    "static/media/image_top_3.jpg": "/burvin_ok/static/media/image_top_3.6504197bc78662d39b2c.jpg",
+    "static/media/title_news.jpg": "/burvin_ok/static/media/title_news.61293bd97879672b583c.jpg",
+    "static/media/burvin2.png": "/burvin_ok/static/media/burvin2.1340e4a9891f961a2205.png",
+    "index.html": "/burvin_ok/index.html",
+    "main.5876a691.css.map": "/burvin_ok/static/css/main.5876a691.css.map",
+    "main.44ea1cac.js.map": "/burvin_ok/static/js/main.44ea1cac.js.map",
+    "104.ee76a617.chunk.js.map": "/burvin_ok/static/js/104.ee76a617.chunk.js.map",
+    "136.72ecee2b.chunk.js.map": "/burvin_ok/static/js/136.72ecee2b.chunk.js.map",
+    "732.d6f40587.chunk.js.map": "/burvin_ok/static/js/732.d6f40587.chunk.js.map",
+    "212.ca6bce54.chunk.js.map": "/burvin_ok/static/js/212.ca6bce54.chunk.js.map",
+    "28.b19a275b.chunk.js.map": "/burvin_ok/static/js/28.b19a275b.chunk.js.map",
+    "448.7e3b871c.chunk.js.map": "/burvin_ok/static/js/448.7e3b871c.chunk.js.map",
+    "500.150f4eb9.chunk.js.map": "/burvin_ok/static/js/500.150f4eb9.chunk.js.map",
+    "270.16ffe6d1.chunk.js.map": "/burvin_ok/static/js/270.16ffe6d1.chunk.js.map",
+    "230.e7f34505.chunk.js.map": "/burvin_ok/static/js/230.e7f34505.chunk.js.map",
+    "432.ee443a10.chunk.js.map": "/burvin_ok/static/js/432.ee443a10.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5876a691.css",
+    "static/js/main.44ea1cac.js"
+  ]
+}
