@@ -1,7 +1,20 @@
 import { useEffect } from 'react';
-import { Overlay, Wrapper, IconClose, ButtonClose, Video } from './ModalVideo.styled';
+import { Overlay, Wrapper, IconClose, ButtonClose } from './Modal.styled';
+import { Fotos, Video } from 'components';
 
-export const ModalVideo = ({ video, onClose }) => {
+export const Modal = ({ type, props, onClose }) => {
+  let content;
+  switch (type) {
+    case 'video':
+      content = <Video {...props} />;
+      break;
+    case 'fotos':
+      content = <Fotos {...props} />;
+      break;
+    default:
+      content = null;
+  }
+
   useEffect(() => {
     const handleClick = e => {
       if (e.code === 'Escape') {
@@ -26,15 +39,7 @@ export const ModalVideo = ({ video, onClose }) => {
         <ButtonClose onClick={onClose}>
           <IconClose />
         </ButtonClose>
-        <Video
-          src={video}
-          title="Video"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;"
-          allowfullscreen
-          modestbranding="1"
-          rel="0"
-        ></Video>
+        {content}
       </Wrapper>
     </Overlay>
   );

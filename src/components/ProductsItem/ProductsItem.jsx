@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AiFillHeart } from 'react-icons/ai';
 import { FaSearchPlus } from 'react-icons/fa';
 import { IoLogoYoutube } from 'react-icons/io';
-import { ModalVideo, PopUp } from 'components';
+import { Modal } from 'components';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFavorites, selectProducts } from 'redux/selectors';
 import { addToFavorites, removeFromFavorites } from 'redux/favoritesSlice';
@@ -35,13 +35,12 @@ export const ProductsItem = ({
   compound,
 }) => {
   const dispatch = useDispatch();
-  const [showModalImage, setShowModalImage] = useState(false);
-  const [showModalVideo, setShowModalVideo] = useState(false);
+  const [modalState, setModalState] = useState({ type: null, props: {} });
   const [isFavorite, setIsFavorite] = useState(false);
   const favorites = useSelector(selectFavorites);
   const products = useSelector(selectProducts);
 
-  const isAdvertsInFavorites = favorites.find(product => product.id === id);
+  const isAdvertsInFavorites = favorites.find(product => product._id === id);
 
   const priceUa = Math.ceil((price * 2 * 39) / 100) * 100;
   const originalPriceUa = Math.ceil((originalPrice * 2 * 39) / 100) * 100;
@@ -49,7 +48,7 @@ export const ProductsItem = ({
 
   const handleFavorite = () => {
     if (!isAdvertsInFavorites) {
-      const product = products.find(product => product.id === id);
+      const product = products.find(product => product._id === id);
       dispatch(addToFavorites(product));
     } else {
       dispatch(removeFromFavorites(id));
@@ -57,24 +56,14 @@ export const ProductsItem = ({
     setIsFavorite(!isFavorite);
   };
 
-  const onOpenModal = () => {
+  const openModal = (type, props = {}) => {
     document.body.style.overflow = 'hidden';
-    setShowModalImage(true);
+    setModalState({ type, props });
   };
 
-  const onCloseModal = () => {
+  const closeModal = () => {
     document.body.style.overflow = 'auto';
-    setShowModalImage(false);
-  };
-
-  const onOpenModalVideo = () => {
-    document.body.style.overflow = 'hidden';
-    setShowModalVideo(true);
-  };
-
-  const onCloseModalVideo = () => {
-    document.body.style.overflow = 'auto';
-    setShowModalVideo(false);
+    setModalState({ type: null, props: {} });
   };
 
   return (
@@ -86,11 +75,11 @@ export const ProductsItem = ({
             <AiFillHeart />
           </Icon>
           {video && (
-            <IconVideo onClick={onOpenModalVideo}>
+            <IconVideo onClick={() => openModal('video', { video })}>
               <IoLogoYoutube />
             </IconVideo>
           )}
-          <IconPlus onClick={onOpenModal}>
+          <IconPlus onClick={() => openModal('fotos', { article, fotos })}>
             <FaSearchPlus />
           </IconPlus>
         </WrapperFoto>
@@ -132,8 +121,9 @@ export const ProductsItem = ({
           {compound}
         </Text>
       </Item>
-      {showModalImage && <PopUp article={article} fotos={fotos} onClose={onCloseModal} />}
-      {showModalVideo && <ModalVideo video={video} onClose={onCloseModalVideo} />}
+      {modalState.type && (
+        <Modal type={modalState.type} props={modalState.props} onClose={closeModal} />
+      )}
     </>
   );
 };
