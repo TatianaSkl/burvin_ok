@@ -124,7 +124,7 @@ export const ProductsItem = ({
             ))}
           </div>
         </WrapperText>
-        <Text style={{ textAlign: 'center', marginBottom: '6px' }}>
+        <Text style={{ textAlign: 'center' }}>
           <span style={{ color: 'black' }}>Склад : </span>
           {compound}
         </Text>
