@@ -4,6 +4,7 @@ export const Item = styled.li`
   width: 274px;
   border-radius: 12px;
   box-shadow: ${props => props.theme.shadows.small};
+  padding-bottom: 8px;
 `;
 
 export const WrapperFoto = styled.div`
@@ -52,31 +53,20 @@ export const Text = styled.div`
   font-weight: 400;
 `;
 
-export const PressButton = styled.button`
-  margin-top: 12px;
-  margin-bottom: 12px;
-  width: 100%;
-  padding: 12px;
-  border-radius: 12px;
-  background-color: ${props => props.theme.colors.accent};
-  color: ${props => props.theme.colors.grey};
+export const TextDescription = styled.div`
+  color: ${props => props.theme.colors.lightGrey};
+  font-size: 12px;
+  line-height: 150%;
+  font-weight: 400;
+  text-align: justify;
+  padding: 8px 8px 0 8px;
+`;
+
+export const SpanDescription = styled.span`
+  color: blue;
+  text-decoration: underline;
   font-size: 14px;
-  font-weight: 600;
-  line-height: 142.857%;
-  box-shadow: ${props => props.theme.shadows.small};
-  transition-property: transform, box-shadow, background-color, color;
-  transition-duration: 0.25s;
-  transition-timing-function: ${props => props.theme.animation.cubicBezier};
-  &:hover {
-    transform: scale(1.02);
-    box-shadow: ${props => props.theme.shadows.medium};
-    background-color: ${props => props.theme.colors.white};
-    color: ${props => props.theme.colors.black};
-  }
-  @media (min-width: 768px) {
-    margin-top: 18px;
-    margin-bottom: 18px;
-  }
+  margin-left: 14px;
 `;
 
 export const Icon = styled.div`

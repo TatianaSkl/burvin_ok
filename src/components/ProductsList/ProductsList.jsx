@@ -16,6 +16,7 @@ export const ProductsList = ({ products }) => {
           discount={product.discount}
           fotos={product.fotos}
           video={product.video}
+          description={product.description}
           compound={product.compound}
         />
       ))}

@@ -20,6 +20,8 @@ import {
   TextSpan,
   WrapperPct,
   IconVideo,
+  SpanDescription,
+  TextDescription,
 } from './ProductsItem.styled';
 
 export const ProductsItem = ({
@@ -33,10 +35,12 @@ export const ProductsItem = ({
   fotos,
   video,
   compound,
+  description,
 }) => {
   const dispatch = useDispatch();
   const [modalState, setModalState] = useState({ type: null, props: {} });
   const [isFavorite, setIsFavorite] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const favorites = useSelector(selectFavorites);
   const products = useSelector(selectProducts);
 
@@ -64,6 +68,10 @@ export const ProductsItem = ({
   const closeModal = () => {
     document.body.style.overflow = 'auto';
     setModalState({ type: null, props: {} });
+  };
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
   };
 
   return (
@@ -120,6 +128,13 @@ export const ProductsItem = ({
           <span style={{ color: 'black' }}>Склад : </span>
           {compound}
         </Text>
+        {description && (
+          <>
+            <SpanDescription onClick={toggleVisibility}>Опис...</SpanDescription>
+
+            {isVisible && <TextDescription>{description}</TextDescription>}
+          </>
+        )}
       </Item>
       {modalState.type && (
         <Modal type={modalState.type} props={modalState.props} onClose={closeModal} />
