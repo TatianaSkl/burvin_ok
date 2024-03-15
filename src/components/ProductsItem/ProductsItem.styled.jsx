@@ -43,7 +43,6 @@ export const Wrap = styled.div`
 export const WrapperText = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-bottom: 8px;
 `;
 
 export const Text = styled.div`
