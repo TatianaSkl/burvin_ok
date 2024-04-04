@@ -46,7 +46,7 @@ export const ProductsItem = ({
 
   const isAdvertsInFavorites = favorites.find(product => product._id === id);
 
-  const priceUa = Math.ceil((price * 2 * 39) / 100) * 100;
+  const priceUa = Math.ceil((price * 2 * 40) / 100) * 100;
   const originalPriceUa = Math.ceil((originalPrice * 2 * 39) / 100) * 100;
   const priceSale = Math.ceil((originalPriceUa - (originalPriceUa * discount) / 100) / 100) * 100;
 
