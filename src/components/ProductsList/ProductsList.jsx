@@ -18,6 +18,7 @@ export const ProductsList = ({ products }) => {
           video={product.video}
           description={product.description}
           compound={product.compound}
+          season={product.season}
         />
       ))}
     </List>
