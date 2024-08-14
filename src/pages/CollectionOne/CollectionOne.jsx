@@ -35,7 +35,7 @@ export default function CollectionOne() {
   return (
     <>
       <Wrapper>
-        <TitlePage text="ОСІНЬ-ЗИМА 23-24" />
+        <TitlePage text="ОСІНЬ-ЗИМА 23" />
         <Filter />
       </Wrapper>
       <Container>

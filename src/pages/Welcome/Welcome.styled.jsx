@@ -34,8 +34,8 @@ export const ButtonGo = styled.button`
   font-weight: 600;
   line-height: 142.857%;
   box-shadow: ${props => props.theme.shadows.small};
-  transition-property: opacity, box-shadow, background-color, color;
-  transition-duration: 0.25s;
+  transition-property: all;
+  transition-duration: 0.55s;
   transition-timing-function: ${props => props.theme.animation.cubicBezier};
   &:hover {
     box-shadow: ${props => props.theme.shadows.medium};
