@@ -6,7 +6,7 @@ import { Wrapper } from 'pages/Collections/Collections.styled';
 import { useEffect } from 'react';
 import { allProducts } from 'redux/products/operations';
 
-export default function CollectionThree() {
+export default function CollectionFour() {
   const dispatch = useDispatch();
   const isFiltred = useSelector(selectIsFiltred);
   const filter = useSelector(filtredProducts);
