@@ -11,9 +11,9 @@ export const ProductsList = ({ products }) => {
           article={product.article}
           name={product.name}
           options={product.options}
-          price={product.price}
-          originalPrice={product.originalPrice}
-          discount={product.discount}
+          priceR={product.priceR}
+          originalPriceR={product.originalPriceR}
+          discountR={product.discountR}
           fotos={product.fotos}
           video={product.video}
           description={product.description}

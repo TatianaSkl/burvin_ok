@@ -29,9 +29,9 @@ export const ProductsItem = ({
   article,
   name,
   options,
-  price,
-  originalPrice,
-  discount,
+  priceR,
+  originalPriceR,
+  discountR,
   fotos,
   video,
   compound,
@@ -49,9 +49,9 @@ export const ProductsItem = ({
 
   const exchangeRate = season.includes('aw24') ? 45 : season.includes('vl24') ? 41 : 39;
 
-  const priceUa = Math.ceil((price * 2 * exchangeRate) / 100) * 100;
-  const originalPriceUa = Math.ceil((originalPrice * 2 * 39) / 100) * 100;
-  const priceSale = Math.ceil((originalPriceUa - (originalPriceUa * discount) / 100) / 100) * 100;
+  const priceUa = Math.ceil((priceR * 2 * exchangeRate) / 100) * 100;
+  const originalPriceUa = Math.ceil((originalPriceR * 2 * 39) / 100) * 100;
+  const priceSale = Math.ceil((originalPriceUa - (originalPriceUa * discountR) / 100) / 100) * 100;
 
   const handleFavorite = () => {
     if (!isAdvertsInFavorites) {
@@ -97,12 +97,12 @@ export const ProductsItem = ({
         <WrapperFlex>
           <Wrap>{name}</Wrap>
           <WrapperModel> {article}</WrapperModel>
-          {discount ? (
+          {discountR ? (
             <div>
               <p style={{ fontSize: '18px', fontWeight: '500' }}>{priceSale} грн</p>
               <div style={{ display: 'flex' }}>
                 <TextSpan>{originalPriceUa} грн</TextSpan>
-                <WrapperPct>- {discount} %</WrapperPct>
+                <WrapperPct>- {discountR} %</WrapperPct>
               </div>
             </div>
           ) : (
