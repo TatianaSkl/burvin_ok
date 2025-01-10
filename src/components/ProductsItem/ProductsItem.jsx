@@ -50,7 +50,7 @@ export const ProductsItem = ({
   const exchangeRate = season.includes('aw24') ? 45 : season.includes('vl24') ? 41 : 39;
 
   const priceUa = Math.ceil((priceR * 2 * exchangeRate) / 100) * 100;
-  const originalPriceUa = Math.ceil((originalPriceR * 2 * 39) / 100) * 100;
+  const originalPriceUa = Math.ceil((originalPriceR * 2 * exchangeRate) / 100) * 100;
   const priceSale = Math.ceil((originalPriceUa - (originalPriceUa * discountR) / 100) / 100) * 100;
 
   const handleFavorite = () => {
