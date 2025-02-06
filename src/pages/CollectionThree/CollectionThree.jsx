@@ -16,9 +16,9 @@ export default function CollectionThree() {
     dispatch(allProducts());
   }, [dispatch]);
 
-  const visibleProducts = products.filter(product => product.season === 'vl24');
+  const visibleProducts = products.filter(product => product.season === 'vl25');
 
-  const filterNew = filter.filter(product => product.season === 'vl24');
+  const filterNew = filter.filter(product => product.season === 'vl25');
 
   const sortedProducts = visibleProducts.sort((a, b) => {
     const articleA = parseInt(a.article.replace(/\D/g, '').substring(0, 4));
@@ -35,7 +35,7 @@ export default function CollectionThree() {
   return (
     <>
       <Wrapper>
-        <TitlePage text="ВЕСНА-ЛІТО 2024" />
+        <TitlePage text="ВЕСНА-ЛІТО 2025" />
         <Filter />
       </Wrapper>
       <Container>

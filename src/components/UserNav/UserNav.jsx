@@ -6,17 +6,14 @@ export const UserNav = ({ onClose }) => {
       <LinkNavText to="/collections" onClick={onClose}>
         Колекції
       </LinkNavText>
-      <LinkNav to="/collection-4" onClick={onClose}>
-        ОСІНЬ-ЗИМА 24
-      </LinkNav>
       <LinkNav to="/collection-3" onClick={onClose}>
-        ВЕСНА-ЛІТО 2024
+        ВЕСНА-ЛІТО 2025
       </LinkNav>
       <LinkNav to="/collection-2" onClick={onClose}>
-        HOLIDAY 2024
+        ОСІНЬ-ЗИМА 2024
       </LinkNav>
       <LinkNav to="/collection-1" onClick={onClose}>
-        ОСІНЬ-ЗИМА 23
+        ВЕСНА-ЛІТО 2024
       </LinkNav>
       <LinkNav to="/outlet" onClick={onClose}>
         АУТЛЕТ

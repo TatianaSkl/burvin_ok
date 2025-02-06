@@ -47,7 +47,8 @@ export const ProductsItem = ({
 
   const isAdvertsInFavorites = favorites.find(product => product._id === id);
 
-  const exchangeRate = season.includes('aw24') ? 45 : season.includes('vl24') ? 41 : 39;
+  const exchangeRate =
+    season.includes('aw24') || season.includes('vl25') ? 45 : season.includes('vl24') ? 41 : 39;
 
   const priceUa = Math.ceil((priceR * 2 * exchangeRate) / 100) * 100;
   const originalPriceUa = Math.ceil((originalPriceR * 2 * exchangeRate) / 100) * 100;
