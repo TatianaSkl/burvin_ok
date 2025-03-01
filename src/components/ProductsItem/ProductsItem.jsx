@@ -22,11 +22,13 @@ import {
   IconVideo,
   SpanDescription,
   TextDescription,
+  TextStatus,
 } from './ProductsItem.styled';
 
 export const ProductsItem = ({
   id,
   article,
+  status,
   name,
   options,
   priceR,
@@ -94,6 +96,7 @@ export const ProductsItem = ({
           <IconPlus onClick={() => openModal('fotos', { article, fotos })}>
             <FaSearchPlus />
           </IconPlus>
+          <TextStatus>{status}</TextStatus>
         </WrapperFoto>
         <WrapperFlex>
           <Wrap>{name}</Wrap>
