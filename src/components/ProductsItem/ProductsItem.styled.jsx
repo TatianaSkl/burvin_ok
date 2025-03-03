@@ -135,7 +135,9 @@ export const TextStatus = styled.div`
   background: ${props => props.theme.colors.white};
   font-size: 12px;
   border-radius: 4px;
-  padding: 2px;
+  padding: 2px 4px 2px 4px;
   color: ${({ children }) => (children === 'В наявності' ? '#0cb96e' : '#a30505')};
-  font-weight: 500;
+  font-weight: 600;
+  box-shadow: ${props => props.theme.shadows.small};
+  text-shadow: 1px 1px 2px rgba(92, 95, 94, 0.5);
 `;
