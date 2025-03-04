@@ -16,14 +16,14 @@ export default function Collections() {
   }, [dispatch]);
 
   const sortedProducts = products.slice().sort((a, b) => {
-    const articleA = parseInt(a.article.replace(/\D/g, '').substring(0, 4));
-    const articleB = parseInt(b.article.replace(/\D/g, '').substring(0, 4));
+    const articleA = parseInt(a.article.replace(/\D/g, '').substring(0, 5));
+    const articleB = parseInt(b.article.replace(/\D/g, '').substring(0, 5));
     return articleB - articleA;
   });
 
   const sortedProductsFilter = filter.slice().sort((a, b) => {
-    const articleA = parseInt(a.article.replace(/\D/g, '').substring(0, 4));
-    const articleB = parseInt(b.article.replace(/\D/g, '').substring(0, 4));
+    const articleA = parseInt(a.article.replace(/\D/g, '').substring(0, 5));
+    const articleB = parseInt(b.article.replace(/\D/g, '').substring(0, 5));
     return articleB - articleA;
   });
 

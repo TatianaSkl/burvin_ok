@@ -21,14 +21,14 @@ export default function CollectionOne() {
   const filterNew = filter.filter(product => product.season === 'vl24');
 
   const sortedProducts = visibleProducts.sort((a, b) => {
-    const articleA = parseInt(a.article.replace(/\D/g, '').substring(0, 4));
-    const articleB = parseInt(b.article.replace(/\D/g, '').substring(0, 4));
+    const articleA = parseInt(a.article.replace(/\D/g, '').substring(0, 5));
+    const articleB = parseInt(b.article.replace(/\D/g, '').substring(0, 5));
     return articleA - articleB;
   });
 
   const sortedProductsFilter = filterNew.sort((a, b) => {
-    const articleA = parseInt(a.article.replace(/\D/g, '').substring(0, 4));
-    const articleB = parseInt(b.article.replace(/\D/g, '').substring(0, 4));
+    const articleA = parseInt(a.article.replace(/\D/g, '').substring(0, 5));
+    const articleB = parseInt(b.article.replace(/\D/g, '').substring(0, 5));
     return articleA - articleB;
   });
 
