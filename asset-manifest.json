@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/burvin_ok/static/css/main.5876a691.css",
-    "main.js": "/burvin_ok/static/js/main.81397db4.js",
+    "main.js": "/burvin_ok/static/js/main.86cce9c9.js",
     "static/js/104.786a2745.chunk.js": "/burvin_ok/static/js/104.786a2745.chunk.js",
     "static/js/136.06f8c8fa.chunk.js": "/burvin_ok/static/js/136.06f8c8fa.chunk.js",
     "static/js/732.df2566f6.chunk.js": "/burvin_ok/static/js/732.df2566f6.chunk.js",
@@ -13,17 +13,17 @@
     "static/js/230.4acbaa2e.chunk.js": "/burvin_ok/static/js/230.4acbaa2e.chunk.js",
     "static/js/287.b7290d05.chunk.js": "/burvin_ok/static/js/287.b7290d05.chunk.js",
     "static/js/127.9efcab18.chunk.js": "/burvin_ok/static/js/127.9efcab18.chunk.js",
-    "static/media/3.webp": "/burvin_ok/static/media/3.641f95a3351f7ced947d.webp",
-    "static/media/1.webp": "/burvin_ok/static/media/1.c9eecd7a783beb888d28.webp",
-    "static/media/4.webp": "/burvin_ok/static/media/4.29cbfc8760cc38b97e89.webp",
-    "static/media/5.webp": "/burvin_ok/static/media/5.5346c0469e3c6a277cf3.webp",
-    "static/media/2.webp": "/burvin_ok/static/media/2.6557b2775eb4e96f8217.webp",
+    "static/media/4.webp": "/burvin_ok/static/media/4.16b374cb5a2ae28fc193.webp",
+    "static/media/5.webp": "/burvin_ok/static/media/5.6557b2775eb4e96f8217.webp",
+    "static/media/3.webp": "/burvin_ok/static/media/3.7b73776900cf05735c8d.webp",
+    "static/media/2.webp": "/burvin_ok/static/media/2.e6d08125359362e9780d.webp",
+    "static/media/1.webp": "/burvin_ok/static/media/1.2432fc68354cad3962ba.webp",
     "static/media/title_news.jpg": "/burvin_ok/static/media/title_news.61293bd97879672b583c.jpg",
     "static/media/burvin2.png": "/burvin_ok/static/media/burvin2.1340e4a9891f961a2205.png",
     "static/media/sprite.svg": "/burvin_ok/static/media/sprite.71b695696f7939147bbf57438a683ed5.svg",
     "index.html": "/burvin_ok/index.html",
     "main.5876a691.css.map": "/burvin_ok/static/css/main.5876a691.css.map",
-    "main.81397db4.js.map": "/burvin_ok/static/js/main.81397db4.js.map",
+    "main.86cce9c9.js.map": "/burvin_ok/static/js/main.86cce9c9.js.map",
     "104.786a2745.chunk.js.map": "/burvin_ok/static/js/104.786a2745.chunk.js.map",
     "136.06f8c8fa.chunk.js.map": "/burvin_ok/static/js/136.06f8c8fa.chunk.js.map",
     "732.df2566f6.chunk.js.map": "/burvin_ok/static/js/732.df2566f6.chunk.js.map",
@@ -38,6 +38,6 @@
   },
   "entrypoints": [
     "static/css/main.5876a691.css",
-    "static/js/main.81397db4.js"
+    "static/js/main.86cce9c9.js"
   ]
 }
