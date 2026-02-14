@@ -6,6 +6,7 @@ import { Modal } from 'components';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFavorites, selectProducts } from 'redux/selectors';
 import { addToFavorites, removeFromFavorites } from 'redux/favoritesSlice';
+import data from 'bd/data.json';
 import {
   Image,
   Item,
@@ -38,7 +39,6 @@ export const ProductsItem = ({
   video,
   compound,
   description,
-  season,
 }) => {
   const dispatch = useDispatch();
   const [modalState, setModalState] = useState({ type: null, props: {} });
@@ -49,7 +49,7 @@ export const ProductsItem = ({
 
   const isAdvertsInFavorites = favorites.find(product => product._id === id);
 
-  const exchangeRate = 45;
+  const exchangeRate = data.exchangeRate;
 
   const priceUa = Math.ceil((priceR * 2 * exchangeRate) / 100) * 100;
   const originalPriceUa = Math.ceil((originalPriceR * 2 * exchangeRate) / 100) * 100;
@@ -134,16 +134,20 @@ export const ProductsItem = ({
             ))}
           </div>
         </WrapperText>
-        <Text style={{ textAlign: 'center' }}>
-          <span style={{ color: 'black' }}>Склад : </span>
-          {compound}
-        </Text>
+        {compound?.trim() && (
+          <Text style={{ textAlign: 'center' }}>
+            <span style={{ color: 'black' }}>Склад : </span>
+            {compound}
+          </Text>
+        )}
         {description && (
-          <>
-            <SpanDescription onClick={toggleVisibility}>Опис...</SpanDescription>
+          <div style={{ marginTop: 'auto' }}>
+            <SpanDescription onClick={toggleVisibility}>
+              {isVisible ? 'Згорнути ▲' : 'Опис ▼'}
+            </SpanDescription>
 
             {isVisible && <TextDescription>{description}</TextDescription>}
-          </>
+          </div>
         )}
       </Item>
       {modalState.type && (

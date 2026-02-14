@@ -5,6 +5,7 @@ import { Empty } from 'pages/Favorites/Favorites.styled';
 import { Wrapper } from 'pages/Collections/Collections.styled';
 import { useEffect } from 'react';
 import { allProducts } from 'redux/products/operations';
+import data from 'bd/data.json';
 
 export default function CollectionThree() {
   const dispatch = useDispatch();
@@ -12,13 +13,15 @@ export default function CollectionThree() {
   const filter = useSelector(filtredProducts);
   const products = useSelector(selectProducts);
 
+  const collection = data.collectionThree;
+
   useEffect(() => {
     dispatch(allProducts());
   }, [dispatch]);
 
-  const visibleProducts = products.filter(product => product.season.startsWith('aw25'));
+  const visibleProducts = products.filter(product => product.season.startsWith(collection.season));
 
-  const filterNew = filter.filter(product => product.season.startsWith('aw25'));
+  const filterNew = filter.filter(product => product.season.startsWith(collection.season));
 
   const sortedProducts = visibleProducts.sort((a, b) => {
     const articleA = parseInt(a.article.replace(/\D/g, '').substring(0, 5));
@@ -35,17 +38,12 @@ export default function CollectionThree() {
   return (
     <>
       <Wrapper>
-        <TitlePage text="ОСІНЬ-ЗИМА 2025" />
+        <TitlePage text={collection.title} />
         <Filter />
       </Wrapper>
       <Container>
         <ProductsList products={isFiltred ? sortedProductsFilter : sortedProducts} />
-        {isFiltred && filter?.length === 0 && (
-          <Empty>
-            На жаль, для вибраних фільтрів не знайдено результатів. Ви можете розглянути інші
-            параметри пошуку, щоб знайти потрібний.
-          </Empty>
-        )}
+        {isFiltred && filter?.length === 0 && <Empty>{data.filterEmpty}</Empty>}
       </Container>
     </>
   );

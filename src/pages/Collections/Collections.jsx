@@ -4,6 +4,7 @@ import { ProductsList, Container, Filter } from 'components';
 import { Empty } from 'pages/Favorites/Favorites.styled';
 import { useEffect } from 'react';
 import { allProducts } from 'redux/products/operations';
+import data from 'bd/data.json';
 
 export default function Collections() {
   const dispatch = useDispatch();
@@ -31,12 +32,7 @@ export default function Collections() {
     <Container>
       <Filter />
       <ProductsList products={isFiltred ? sortedProductsFilter : sortedProducts} />
-      {isFiltred && filter?.length === 0 && (
-        <Empty>
-          На жаль, для вибраних фільтрів не знайдено результатів. Ви можете розглянути інші
-          параметри пошуку, щоб знайти потрібний.
-        </Empty>
-      )}
+      {isFiltred && filter?.length === 0 && <Empty>{data.filterEmpty}</Empty>}
     </Container>
   );
 }

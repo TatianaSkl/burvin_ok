@@ -1,4 +1,5 @@
 import { LinkNav, LinkNavText, NavUser } from './UserNav.styled';
+import data from 'bd/data.json';
 
 export const UserNav = ({ onClose }) => {
   return (
@@ -6,17 +7,17 @@ export const UserNav = ({ onClose }) => {
       <LinkNavText to="/collections" onClick={onClose}>
         Колекції
       </LinkNavText>
-      <LinkNav to="/collection-3" onClick={onClose}>
-        ОСІНЬ-ЗИМА 2025
+      <LinkNav to={data.collectionThree.slug} onClick={onClose}>
+        {data.collectionThree.title}
       </LinkNav>
-      <LinkNav to="/collection-2" onClick={onClose}>
-        ВЕСНА-ЛІТО 2025
+      <LinkNav to={data.collectionTwo.slug} onClick={onClose}>
+        {data.collectionTwo.title}
       </LinkNav>
-      <LinkNav to="/collection-1" onClick={onClose}>
-        ОСІНЬ-ЗИМА 2024
+      <LinkNav to={data.collectionOne.slug} onClick={onClose}>
+        {data.collectionOne.title}
       </LinkNav>
-      <LinkNav to="/outlet" onClick={onClose}>
-        АУТЛЕТ
+      <LinkNav to={data.outlet.slug} onClick={onClose}>
+        {data.outlet.title}
       </LinkNav>
       <LinkNav to="/favorites" onClick={onClose}>
         ВИБРАНЕ

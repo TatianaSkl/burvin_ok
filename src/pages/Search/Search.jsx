@@ -5,6 +5,7 @@ import { selectProducts, selectSearch } from 'redux/selectors';
 import { Wrapper } from 'pages/Collections/Collections.styled';
 import { useEffect } from 'react';
 import { allProducts } from 'redux/products/operations';
+import data from 'bd/data.json';
 
 export default function Search() {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ export default function Search() {
       </Wrapper>
       <Container>
         {visibleSearchProducts.length === 0 ? (
-          <Empty>На жаль, за пошуком результатів не знайдено.</Empty>
+          <Empty>{data.searchEmpty}</Empty>
         ) : (
           <ProductsList products={visibleSearchProducts} />
         )}
