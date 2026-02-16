@@ -14,6 +14,7 @@ export const WrapperFoto = styled.div`
   height: 330px;
   border-radius: 12px 12px 0 0;
   overflow: hidden;
+  cursor: pointer;
 `;
 
 export const Image = styled.img`

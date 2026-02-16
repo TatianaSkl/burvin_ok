@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { AiFillHeart } from 'react-icons/ai';
-import { FaSearchPlus } from 'react-icons/fa';
 import { IoLogoYoutube } from 'react-icons/io';
 import { Modal } from 'components';
 import { useDispatch, useSelector } from 'react-redux';
@@ -16,7 +15,6 @@ import {
   WrapperFoto,
   WrapperModel,
   Icon,
-  IconPlus,
   WrapperText,
   TextSpan,
   WrapperPct,
@@ -55,7 +53,8 @@ export const ProductsItem = ({
   const originalPriceUa = Math.ceil((originalPriceR * 2 * exchangeRate) / 100) * 100;
   const priceSale = Math.ceil((originalPriceUa - (originalPriceUa * discountR) / 100) / 100) * 100;
 
-  const handleFavorite = () => {
+  const handleFavorite = e => {
+    e.stopPropagation();
     if (!isAdvertsInFavorites) {
       const product = products.find(product => product._id === id);
       dispatch(addToFavorites(product));
@@ -63,6 +62,11 @@ export const ProductsItem = ({
       dispatch(removeFromFavorites(id));
     }
     setIsFavorite(!isFavorite);
+  };
+
+  const handleVideoClick = e => {
+    e.stopPropagation();
+    openModal('video', { video });
   };
 
   const openModal = (type, props = {}) => {
@@ -86,19 +90,16 @@ export const ProductsItem = ({
   return (
     <>
       <Item>
-        <WrapperFoto>
+        <WrapperFoto onClick={() => openModal('fotos', { article, fotos })}>
           <Image src={fotos[0]} alt={name} loading="lazy" />
           <Icon isAdvertsInFavorites={isAdvertsInFavorites} onClick={handleFavorite}>
             <AiFillHeart />
           </Icon>
           {video && (
-            <IconVideo onClick={() => openModal('video', { video })}>
+            <IconVideo onClick={handleVideoClick}>
               <IoLogoYoutube />
             </IconVideo>
           )}
-          <IconPlus onClick={() => openModal('fotos', { article, fotos })}>
-            <FaSearchPlus />
-          </IconPlus>
           <TextStatus>{status}</TextStatus>
         </WrapperFoto>
         <WrapperFlex>

@@ -1,32 +1,24 @@
-import { useState } from 'react';
-import { GrCaretNext } from 'react-icons/gr';
-import { GrCaretPrevious } from 'react-icons/gr';
-import { ImageItem, ButtonNext, ButtonPrev } from './Fotos.styled';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { ImageItem } from './Fotos.styled';
 
-export const Fotos = ({ article, fotos }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const onNextImage = () => {
-    setCurrentImageIndex(prevIndex => (prevIndex + 1) % fotos.length);
-  };
-
-  const onPrevImage = () => {
-    setCurrentImageIndex(prevIndex => (prevIndex - 1 + fotos.length) % fotos.length);
-  };
-
+export const Fotos = ({ fotos }) => {
   return (
-    <>
-      <ImageItem src={fotos[currentImageIndex]} alt={article} />
-      {fotos.length > 1 && (
-        <>
-          <ButtonPrev onClick={onPrevImage}>
-            <GrCaretPrevious />
-          </ButtonPrev>
-          <ButtonNext onClick={onNextImage}>
-            <GrCaretNext />
-          </ButtonNext>
-        </>
-      )}
-    </>
+    <Swiper
+      modules={[Navigation, Pagination]}
+      loop={true}
+      grabCursor={true}
+      navigation
+      pagination={{ clickable: true }}
+    >
+      {fotos.map((foto, idx) => (
+        <SwiperSlide key={idx}>
+          <ImageItem src={foto} alt={idx} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
