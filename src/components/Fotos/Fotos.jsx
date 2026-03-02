@@ -3,9 +3,9 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { ImageItem } from './Fotos.styled';
+import { ArticleLabel, ImageItem, ImageWrapper } from './Fotos.styled';
 
-export const Fotos = ({ fotos }) => {
+export const Fotos = ({ article, fotos }) => {
   return (
     <Swiper
       modules={[Navigation, Pagination]}
@@ -16,7 +16,10 @@ export const Fotos = ({ fotos }) => {
     >
       {fotos.map((foto, idx) => (
         <SwiperSlide key={idx}>
-          <ImageItem src={foto} alt={idx} />
+          <ImageWrapper>
+            <ImageItem src={foto} alt={idx} />
+            <ArticleLabel>{article}</ArticleLabel>
+          </ImageWrapper>
         </SwiperSlide>
       ))}
     </Swiper>
