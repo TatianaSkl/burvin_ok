@@ -99,15 +99,15 @@ export const IconPlus = styled.div`
 `;
 export const IconVideo = styled.div`
   position: absolute;
-  bottom: 30px;
-  right: 0;
+  bottom: 5px;
+  right: 10px;
   width: 30px;
   height: 30px;
   cursor: pointer;
   & svg {
     color: red;
-    width: 18px;
-    height: 18px;
+    width: 28px;
+    height: 28px;
   }
 `;
 

@@ -22,5 +22,5 @@ export const ArticleLabel = styled.div`
   padding: 4px 8px;
   border-radius: 4px;
 
-  font-size: 14px;
+  font-size: 18px;
 `;
