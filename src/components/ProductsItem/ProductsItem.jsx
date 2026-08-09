@@ -22,6 +22,7 @@ import {
   SpanDescription,
   TextDescription,
   TextStatus,
+  
 } from './ProductsItem.styled';
 
 export const ProductsItem = ({
@@ -117,7 +118,7 @@ export const ProductsItem = ({
             <div>{priceUa} грн</div>
           )}
         </WrapperFlex>
-        <WrapperText>
+            <WrapperText>
           <div>
             {options.map(option => (
               <Text key={`${option.color}-${option.sizes}`}>
